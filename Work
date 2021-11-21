@@ -1,0 +1,40 @@
+makeVector <- función (x = numeric ()) {
+
+        m <- NULO
+
+        set <- función (y) {
+
+                x << - y
+                m << - NULO
+        }
+
+        obtener <- función () x
+
+        setmean <- función (media) m << - media
+
+        getmean <- función () m
+
+        lista (establecer = establecer, obtener = obtener,
+
+
+##  La siguiente función calcula la media del "vector" especial creado con la función anterior. Sin embargo, primero verifica si la media ya se ha calculado. Si es así, obtiene la media de la caché y omite el cálculo. De lo contrario, calcula la media de los datos y establece el valor de la media en la caché a través de la función setmean.
+
+cachemean <- función (x, ...) {
+
+        m <- x $ getmean ()
+
+        if (! is.null (m)) {
+
+                mensaje ("obteniendo datos en caché")
+                volver (m)
+        }
+
+        datos <- x $ get ()
+
+        m <- media (datos, ...)
+
+        x $ setmean (m)
+
+        metro
+
+##  Asignación: Almacenamiento en caché de la inversa de una matriz menos
